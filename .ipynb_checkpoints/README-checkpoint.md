@@ -2,9 +2,9 @@
 
 The project is a complete COVID-19 detection package comprising of 3 tasks:<br />
 <br />
+➤ **Task 3:** Lung Segmentation<br />
 ➤ **Task 1:** COVID-19 Infection Segmentation<br />
 ➤ **Task 2:** COVID-19 Classification<br />
-➤ **Task 3:** Lung Segmentation<br />
  
 <table border="0">
  <tr>
@@ -21,7 +21,7 @@ The project is a complete COVID-19 detection package comprising of 3 tasks:<br /
 ### ➥ <ins> Some Instructions and Guidelines for Code Execution </ins>
 1. All scripts are exactly the same with the notebooks having same titles.
 2. Any necessary package to be installed is placed on top of each of the six scripts/notebooks.
-3. Scripts/Notebooks are using kaggle and Colab collectively, so will contain some exclusive operations as per the platform like importing data from kaggle to colab needs a unique API key, mounting drive and authentication, etc
+
 
 
 #### -----------------------------------------------------------------------------------------------------------------------------------------
@@ -31,81 +31,10 @@ The project is a complete COVID-19 detection package comprising of 3 tasks:<br /
 
 ★ **task1_preprocessing_plus_unet_with_comments.py** ---> Contains the maximum number of comments and explanation. Any doubt, if persists probably could be rectified here. It contains the UNet training for infection mask prediction (Task- 1)
 
-★ **task1_crossval_3folds_unet.py** --> Contains the cross-validation (3-folds) for TASK-1. 
 
-★ **task1_crossval_4folds_unet.py** --> Contains the cross-validation (4-folds) for TASK-1.
-
-★ **task1_unet_plus_plus.py** --> Contains the unet++ training for TASK-1. 
-
-★ **task2_covid19_classifcation.py** --> Contains the covid-19 classification (TASK-2).
-
-★ **task3_lung_segmentation_unet.py** --> Contains Unet training for lung segmentation (TASK-3).
-
-★ **app.py** --> Contains a runner code for running any file listed above.
-
-```python
-
-# app.py
-
-from task1_crossval_3folds_unet import *
-from task1_crossval_4folds_unet import *
-from task1_preprocessing_plus_unet_with_comments import *
-from task1_unet_plus_plus import *
-from task2_covid19_classifcation import *
-from task3_lung_segmentation_unet import *
-
-
-print("\n\n\n\n")
-print("--------------------------------------------------------------------------------------")
-print(" 'one' --> Task1: 3-fold cross-validation UNet (Infection Segmentation)")
-print(" 'two' --> Task1: 4-fold cross-validation UNet (Infection Segmentation)")
-print(" 'three' --> Task1: UNet original holdout method (Infection Segmentation)")
-print(" 'four' --> Task1: UNet++ holdout method (Infection Segmentation)")
-print(" 'five' --> Task2: COVID-19 Classification")
-print(" 'six' --> Task3: Lung Segmentation")
-print("--------------------------------------------------------------------------------------")
-print("\n\n\n\n\n")
-
-
-print("Enter from one of the {'one', 'two', 'three', 'four', 'five', 'six', 'seven'}")
-num = input()
-
-
-if num == 'one':
-	three_fold_runner_unet_infection_segmentation()
-    
-
-if num == 'two':
-	four_fold_runner_unet_infection_segmentation()
-
-
-if num == 'three':
-	holdout_runner_unet_infection_segmentation()
-
-
-if num == 'four':
-	holdout_runner_unetplusplus_infection_segmentation()
-
-
-if num == 'five':
-	runner_classification()
-
-
-if num == 'six':
-	runner_lung_segmentation()
-```
 
 #### -----------------------------------------------------------------------------------------------------------------------------------------
-<table border="0">
- <tr>
-    <td><b style="font-size:30px"></b></td>
-    <td><b style="font-size:30px"></b></td>
- </tr>
- <tr>
-    <td><img src="https://media.giphy.com/media/f8V1i0JBW5DYR6JfbN/giphy.gif" width="400" height="300" /></td>
-    <td><img src="https://media.giphy.com/media/LLHkw7UnvY3Kw/giphy.gif" width="400" height="300" /></td>
- </tr>
-</table> 
+
 
 *Note: Not all are displayed here, rest could be fetched after running notebooks*
 
